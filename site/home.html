@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>听力练习</title>
+<style>
+  :root{
+    --bg:#f6f6f4;
+    --fg:#181818;
+    --muted:#6b6b64;
+    --hover:#000;
+  }
+
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0f0f10;
+      --fg:#ededed;
+      --muted:#8b8b85;
+      --hover:#fff;
+    }
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box}
+
+  html,body{height:100%}
+
+  body{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:clamp(18px, 3.4vh, 34px);
+    background:var(--bg);
+    color:var(--fg);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",
+                "Hiragino Sans GB","Microsoft YaHei",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    padding:24px;
+    animation:fade .9s ease both;
+  }
+
+  @keyframes fade{
+    from{opacity:0;transform:translateY(8px)}
+    to{opacity:1;transform:none}
+  }
+
+  /* 时间 */
+  .clock{
+    font-size:clamp(3.2rem, 13vw, 8.5rem);
+    font-weight:200;
+    line-height:1;
+    letter-spacing:.02em;
+    font-variant-numeric:tabular-nums;
+    font-feature-settings:"tnum" 1;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",
+                "Hiragino Sans GB","Microsoft YaHei",Roboto,Helvetica,Arial,sans-serif;
+    /* tabular-nums 保证每个数字等宽，跳秒不抖动 */
+  }
+
+  /* 后台入口 */
+  .enter{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:clamp(.84rem, 1.9vw, .96rem);
+    letter-spacing:.08em;
+    color:var(--fg);
+    text-decoration:none;
+    padding:11px 26px;
+    border:1px solid rgba(128,128,128,.36);
+    border-radius:999px;
+    transition:color .2s ease, background-color .2s ease, border-color .2s ease;
+  }
+
+  .enter:hover,
+  .enter:focus-visible{
+    color:var(--bg);
+    background:var(--fg);
+    border-color:var(--fg);
+    outline:none;
+  }
+
+  .enter:focus-visible{
+    box-shadow:0 0 0 2px rgba(128,128,128,.35);
+  }
+
+  .enter svg{
+    width:14px;
+    height:14px;
+    stroke:currentColor;
+    fill:none;
+    stroke-width:1.6;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+  }
+
+  /* 备案号 */
+  .icp{
+    font-size:clamp(.78rem, 1.9vw, .92rem);
+    letter-spacing:.06em;
+    color:var(--muted);
+    text-decoration:none;
+    padding:6px 10px;
+    border-radius:6px;
+    transition:color .2s ease, background-color .2s ease;
+  }
+
+  .icp:hover,
+  .icp:focus-visible{
+    color:var(--hover);
+    background:rgba(128,128,128,.09);
+    outline:none;
+  }
+
+  .icp:focus-visible{
+    box-shadow:0 0 0 2px rgba(128,128,128,.35);
+  }
+</style>
+</head>
+<body>
+
+  <div class="clock" id="clock">--:--:--</div>
+
+  <a class="enter" href="login.php">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <rect x="4" y="10" width="16" height="10" rx="2"></rect>
+      <path d="M8 10V7a4 4 0 0 1 8 0v3"></path>
+    </svg>
+    后台登录
+  </a>
+
+  <!--BEIAN-->
+
+
+<script>
+/*
+ * 时钟逻辑
+ * 1. 始终按北京时间（UTC+8，无夏令时）渲染，不受访客设备时区影响。
+ * 2. 打开页面立即用本地时钟渲染，随后异步向公共对时接口校时，首屏不阻塞。
+ * 3. 两个时间源并行探测，按「时延 + 精度」评分择优，并补偿单程网络延迟；
+ *    请求携带唯一参数绕过缓存，避免代理回放旧时间。
+ * 4. 每 10 分钟重新对时；切回标签页时若已过期则立即对时。
+ * 5. 全部时间源不可用时自动回退到本地时钟，页面功能不受影响。
+ */
+(function () {
+  'use strict';
+
+  var BEIJING_MS = 8 * 3600 * 1000;   // 北京时间固定偏移
+  var TIMEOUT    = 4000;              // 单个时间源超时
+  var MAX_SKEW   = 7 * 864e5;         // 与本地时钟偏差超过 7 天视为脏数据
+  var RESYNC     = 10 * 60 * 1000;    // 重新对时间隔
+  var SETTLE     = 1200;              // 首个源成功后稍作等待，取最快的那个
+  var SAMPLES    = 2;                 // 每个时间源的采样次数（取 RTT 最小的一次）
+
+  var el = document.getElementById('clock');
+  var offset = 0;                     // 服务器时间 - 设备时间
+  var tickTimer = null;
+  var syncTimer = null;
+  var syncing = false;
+  var lastSyncAt = 0;
+
+  function pad(n) { return n < 10 ? '0' + n : '' + n; }
+
+  // 当前（已校准的）绝对时间
+  function now() { return Date.now() + offset; }
+
+  function render() {
+    // 先取 UTC 再叠加固定时区，得到不随设备时区漂移的北京时间
+    var d = new Date(now() + BEIJING_MS);
+    el.textContent = pad(d.getUTCHours()) + ':' + pad(d.getUTCMinutes()) + ':' + pad(d.getUTCSeconds());
+  }
+
+  function tick() {
+    render();
+    tickTimer = setTimeout(tick, 1000 - (now() % 1000));
+  }
+
+  function realign() {
+    if (tickTimer) clearTimeout(tickTimer);
+    tick();
+  }
+
+  /* ---------- 两种取数方式 ---------- */
+
+  // 1) 常规跨域 JSON（服务器需返回 Access-Control-Allow-Origin）
+  function viaJson(url, timeout) {
+    var ctl = new AbortController();
+    var timer = setTimeout(function () { ctl.abort(); }, timeout);
+    return fetch(url, { signal: ctl.signal, cache: 'no-store', mode: 'cors' })
+      .then(function (res) {
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        return res.json();
+      })
+      .then(
+        function (json) { clearTimeout(timer); return json; },
+        function (err)  { clearTimeout(timer); throw err; }
+      );
+  }
+
+  // 2) script 标签加载「赋值给全局变量」的脚本（受限最少，无需 CORS）
+  function viaScript(url, globalName, timeout) {
+    return new Promise(function (resolve, reject) {
+      var script = document.createElement('script');
+      var fired = false;
+      var timer = setTimeout(function () { fail(new Error('timeout')); }, timeout);
+
+      function cleanup() {
+        clearTimeout(timer);
+        script.onload = script.onerror = null;
+        if (script.parentNode) script.parentNode.removeChild(script);
+      }
+      function fail(err) {
+        if (fired) return;
+        fired = true;
+        cleanup();
+        reject(err);
+      }
+
+      script.onload = function () {
+        if (fired) return;
+        fired = true;
+        cleanup();
+        var val = window[globalName];
+        try { delete window[globalName]; } catch (e) { window[globalName] = undefined; }
+        resolve(val);
+      };
+      script.onerror = function () { fail(new Error('load error')); };
+      script.src = url;
+      document.head.appendChild(script);
+    });
+  }
+
+  /* ---------- 时间源（granularity = 返回值精度，单位毫秒） ---------- */
+
+  var SOURCES = [
+    {
+      // 毫秒精度；返回北京时区时间但不带时区后缀，需自行补 +08:00
+      name: 'timeapi.io',
+      kind: 'json',
+      url: 'https://timeapi.io/api/Time/current/zone?timeZone=Asia%2FShanghai',
+      granularity: 1,
+      pick: function (j) {
+        var s = j && j.dateTime;
+        if (!s) return NaN;
+        if (!/(Z|[+-]\d{2}:?\d{2})$/.test(s)) s += '+08:00';
+        return Date.parse(s);
+      }
+    },
+    {
+      // 国内可用性最好；返回 { t: 秒级时间戳 }，脚本会赋值给全局 QZOutputJson
+      name: '腾讯对时接口',
+      kind: 'script',
+      url: 'https://vv.video.qq.com/checktime?otype=json',
+      globalName: 'QZOutputJson',
+      granularity: 1000,
+      pick: function (j) {
+        return j && j.t ? j.t * 1000 : NaN;
+      }
+    }
+  ];
+
+  // 探测单个时间源：返回相对设备时钟的偏移量，以及可信度评分
+  function probe(src) {
+    var best = null;
+    var tries = 0;
+
+    function once() {
+      var t0 = Date.now();
+      // 追加唯一参数，绕过浏览器与中间代理的缓存，确保拿到的是"此刻"
+      var url = src.url + (src.url.indexOf('?') < 0 ? '?' : '&') + '_=' + t0;
+      var req = src.kind === 'script'
+        ? viaScript(url, src.globalName, TIMEOUT)
+        : viaJson(url, TIMEOUT);
+
+      return req.then(function (payload) {
+        var t1 = Date.now();
+        var ms = src.pick(payload);
+
+        // 明显不合理的值直接丢弃，防止接口异常或错误页被当成时间
+        if (!isFinite(ms) || Math.abs(ms - Date.now()) > MAX_SKEW) {
+          throw new Error('数据无效');
+        }
+
+        var rtt  = t1 - t0;
+        var gran = src.granularity || 0;
+
+        // 服务器真值落在 [ms, ms+gran) 内，取中值；再按 RTT/2 补偿单程网络延迟
+        return {
+          name: src.name,
+          offset: ms + Math.round(gran / 2) + Math.round(rtt / 2) - t1,
+          // 预期误差：往返延迟的不对称项 + 时间戳的量化误差，越小越可信
+          score: Math.round(rtt / 2) + Math.round(gran / 2)
+        };
+      });
+    }
+
+    // 首个样本主要用于建立连接（含 TCP/TLS 握手），RTT 偏大且不对称；
+    // 多打几次取 RTT 最小的一条，单程延迟的估计才更接近真实
+    function loop() {
+      return once().then(function (r) {
+        if (!best || r.score < best.score) best = r;
+        if (++tries < SAMPLES) return loop();
+        return best;
+      }, function (err) {
+        if (best) return best;
+        if (++tries < SAMPLES) return loop();
+        return Promise.reject(err);
+      });
+    }
+
+    return loop();
+  }
+
+  // 并行探测全部时间源，取评分最低（最快且最精确）的一条
+  function sync() {
+    return new Promise(function (resolve) {
+      var results = [];
+      var pending = SOURCES.length;
+      var timer = null;
+      var settled = false;
+
+      function finish() {
+        if (settled) return;
+        settled = true;
+        if (timer) clearTimeout(timer);
+        if (!results.length) return resolve(null);
+        results.sort(function (a, b) { return a.score - b.score; });
+        resolve(results[0]);
+      }
+
+      SOURCES.forEach(function (src) {
+        probe(src).then(
+          function (r) {
+            results.push(r);
+            if (!timer) timer = setTimeout(finish, SETTLE);   // 首个成功后稍等，凑齐再择优
+          },
+          function () { /* 忽略单个源的失败 */ }
+        ).then(function () {
+          if (--pending === 0) finish();
+        });
+      });
+
+      setTimeout(finish, TIMEOUT * SAMPLES);   // 兜底，避免个别源拖死整个流程
+    });
+  }
+
+  function scheduleSync(delay) {
+    if (syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(runSync, delay);
+  }
+
+  function runSync() {
+    if (syncing) return;
+    syncing = true;
+
+    sync().then(function (best) {
+      syncing = false;
+      lastSyncAt = Date.now();
+
+      if (best) {
+        offset = best.offset;
+        realign();
+        console.info('[clock] 已对时：' + best.name +
+                     '｜校正 ' + Math.round(best.offset) + 'ms');
+      } else {
+        console.warn('[clock] 所有时间源均不可用，回退到设备本地时钟（按 UTC+8 显示）');
+      }
+
+      scheduleSync(RESYNC);
+    });
+  }
+
+  /* ---------- 启动 ---------- */
+
+  render();
+  tick();
+  runSync();
+
+  // 切回标签页时，若距上次对时已久则立即校时
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden) return;
+    render();
+    if (Date.now() - lastSyncAt > 5 * 60 * 1000) scheduleSync(0);
+  });
+})();
+</script>
+
+</body>
+</html>

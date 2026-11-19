@@ -1,0 +1,23 @@
+# 配置（含数据库密码）
+site/config.php
+
+# 运行时缓存
+site/data/cache/
+
+# 听力音频（体积大，自行放置）
+site/audio/
+
+# 本地调试与部署脚本（含面板/管理员凭据）
+cdp_*.js
+deploy.py
+_curl.php
+site/_curl.php
+
+# 临时产物
+work/
+preview/
+preview2/
+.chk/
+crop/
+__pycache__/
+*.log

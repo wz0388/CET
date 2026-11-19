@@ -1,0 +1,2296 @@
+{
+ "papers": [
+  {
+   "id": "s1",
+   "title": "2026 年 6 月 六级真题 · 第 1 套",
+   "short": "2026-06 · 第 1 套",
+   "audio": "audio/set1.mp3",
+   "duration": 1535.6,
+   "sections": [
+    {
+     "id": "A",
+     "name": "Section A",
+     "desc": "长对话",
+     "items": [
+      {
+       "id": "a1",
+       "title": "Conversation 1",
+       "cn": "长对话一",
+       "start": 36.9,
+       "end": 142.4,
+       "qstart": 142.4,
+       "qend": 205.4,
+       "questions": [
+        {
+         "no": 1,
+         "start": 147.24,
+         "end": 151.57,
+         "options": {
+          "A": "How to run one's business successfully.",
+          "B": "How to make progress in one's career.",
+          "C": "Why few people can fully display their capabilities.",
+          "D": "Why young people seldom get the expected promotion."
+         }
+        },
+        {
+         "no": 2,
+         "start": 164.17,
+         "end": 169.08,
+         "options": {
+          "A": "To mix and interact with peers within the organization.",
+          "B": "To restrict their connections exclusively to colleagues.",
+          "C": "To limit communication only to their superiors.",
+          "D": "To underestimate their role in the company."
+         }
+        },
+        {
+         "no": 3,
+         "start": 181.68,
+         "end": 186.95,
+         "options": {
+          "A": "Put in quality time.",
+          "B": "Connect with managers.",
+          "C": "Make greater efforts.",
+          "D": "Demonstrate final results."
+         }
+        },
+        {
+         "no": 4,
+         "start": 199.55,
+         "end": 205.4,
+         "options": {
+          "A": "To show their genius.",
+          "B": "To gain due respect.",
+          "C": "To guard against humiliation.",
+          "D": "To avoid appearing arrogant."
+         }
+        }
+       ]
+      },
+      {
+       "id": "a2",
+       "title": "Conversation 2",
+       "cn": "长对话二",
+       "start": 217.7,
+       "end": 331.0,
+       "qstart": 331.0,
+       "qend": 394.6,
+       "questions": [
+        {
+         "no": 5,
+         "start": 335.8,
+         "end": 340.91,
+         "options": {
+          "A": "Decide how to divide up the presentation tasks.",
+          "B": "Investigate the available background research.",
+          "C": "Complete the project design together.",
+          "D": "Find a suitable topic for their article."
+         }
+        },
+        {
+         "no": 6,
+         "start": 353.51,
+         "end": 358.68,
+         "options": {
+          "A": "He wants to devote his time to other portions.",
+          "B": "He believes the woman is better able to handle it.",
+          "C": "He claims to have done most of the work already.",
+          "D": "He finds the woman more meticulous about details."
+         }
+        },
+        {
+         "no": 7,
+         "start": 371.28,
+         "end": 376.49,
+         "options": {
+          "A": "Questioning.",
+          "B": "Complaining.",
+          "C": "Arguing.",
+          "D": "Worrying."
+         }
+        },
+        {
+         "no": 8,
+         "start": 389.09,
+         "end": 394.6,
+         "options": {
+          "A": "To avoid sounding monotonous to the listeners.",
+          "B": "To make the division of labor more reasonable.",
+          "C": "To keep himself from being overburdened.",
+          "D": "To bring their capabilities fully into play."
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "name": "Section B",
+     "desc": "听力篇章",
+     "items": [
+      {
+       "id": "b1",
+       "title": "Passage 1",
+       "cn": "篇章一",
+       "start": 435.9,
+       "end": 548.1,
+       "qstart": 548.1,
+       "qend": 600.3,
+       "questions": [
+        {
+         "no": 9,
+         "start": 552.92,
+         "end": 560.37,
+         "options": {
+          "A": "Alter others' perceptions of the wearer.",
+          "B": "Win others' admiration for the wearer.",
+          "C": "Enhance the wearer's confidence.",
+          "D": "Change the wearer's appearance."
+         }
+        },
+        {
+         "no": 10,
+         "start": 572.97,
+         "end": 580.07,
+         "options": {
+          "A": "As being a greater threat.",
+          "B": "As being of higher prestige.",
+          "C": "As being more dominant.",
+          "D": "As being more attractive."
+         }
+        },
+        {
+         "no": 11,
+         "start": 592.67,
+         "end": 600.3,
+         "options": {
+          "A": "It might influence her way of introducing herself.",
+          "B": "It might impact her dressing style for the occasion.",
+          "C": "It might affect her decision on applying cosmetics.",
+          "D": "It might sway her view on the interviewers' questions."
+         }
+        }
+       ]
+      },
+      {
+       "id": "b2",
+       "title": "Passage 2",
+       "cn": "篇章二",
+       "start": 611.2,
+       "end": 718.3,
+       "qstart": 718.3,
+       "qend": 786.2,
+       "questions": [
+        {
+         "no": 12,
+         "start": 723.4,
+         "end": 730.05,
+         "options": {
+          "A": "Those involving no self-recognition.",
+          "B": "Those forcing us to clench our teeth.",
+          "C": "Those resisting various temptations.",
+          "D": "Those requiring no willpower at all."
+         }
+        },
+        {
+         "no": 13,
+         "start": 742.65,
+         "end": 747.84,
+         "options": {
+          "A": "Regulating one's actions for the sake of good health.",
+          "B": "Controlling one's actions with a motivating thought.",
+          "C": "Using practical examples to guide one's behavior.",
+          "D": "Denying oneself any comfort to prevent diseases."
+         }
+        },
+        {
+         "no": 14,
+         "start": 760.44,
+         "end": 766.1,
+         "options": {
+          "A": "It equips us with an expert skill.",
+          "B": "It exerts an enduring force on us.",
+          "C": "It leads to a burning goal.",
+          "D": "It begins with a bright idea."
+         }
+        },
+        {
+         "no": 15,
+         "start": 778.7,
+         "end": 786.2,
+         "options": {
+          "A": "Any cherished goal.",
+          "B": "Any positive mindset.",
+          "C": "Any personal instinct.",
+          "D": "Any valued role model."
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "name": "Section C",
+     "desc": "讲座 / 讲话",
+     "items": [
+      {
+       "id": "c1",
+       "title": "Recording 1",
+       "cn": "讲座一",
+       "start": 823.5,
+       "end": 1004.4,
+       "qstart": 1004.4,
+       "qend": 1054.4,
+       "questions": [
+        {
+         "no": 16,
+         "start": 1009.62,
+         "end": 1016.58,
+         "options": {
+          "A": "It has long been criticized as unclear.",
+          "B": "It has long been ignored by the public.",
+          "C": "It has caused much panic among women.",
+          "D": "It has resulted in different understandings."
+         }
+        },
+        {
+         "no": 17,
+         "start": 1029.18,
+         "end": 1034.4,
+         "options": {
+          "A": "It warned consumers not to eat fish from the Gulf of Mexico.",
+          "B": "It called on expectant mothers to pay attention to food safety.",
+          "C": "It issued an update to the advice on seafood consumption.",
+          "D": "It listed more than sixty species of fish as \"choices to avoid\"."
+         }
+        },
+        {
+         "no": 18,
+         "start": 1047.0,
+         "end": 1054.4,
+         "options": {
+          "A": "The impact of the FDA's analysis.",
+          "B": "Multiple factors including mercury.",
+          "C": "Critics' conclusions.",
+          "D": "The prices of seafood."
+         }
+        }
+       ]
+      },
+      {
+       "id": "c2",
+       "title": "Recording 2",
+       "cn": "讲座二",
+       "start": 1066.1,
+       "end": 1219.8,
+       "qstart": 1219.8,
+       "qend": 1270.5,
+       "questions": [
+        {
+         "no": 19,
+         "start": 1225.11,
+         "end": 1231.23,
+         "options": {
+          "A": "They will suffer a breakdown soon.",
+          "B": "They will be losing both joy and life.",
+          "C": "They will be putting themselves and family at risk.",
+          "D": "They will make things worse for people around them."
+         }
+        },
+        {
+         "no": 20,
+         "start": 1243.83,
+         "end": 1250.51,
+         "options": {
+          "A": "Spend 14 days for vacation every year.",
+          "B": "Aim for three separate vacations yearly.",
+          "C": "Space out their vacations evenly instead of taking one long vacation.",
+          "D": "Use all their days off for a long summer break to achieve full-on calm."
+         }
+        },
+        {
+         "no": 21,
+         "start": 1263.11,
+         "end": 1270.5,
+         "options": {
+          "A": "Expecting to have more vacations in a year will boost one's work efficiency.",
+          "B": "Anticipating more vacations would reduce one's feelings of despair at work.",
+          "C": "Taking more than three vacations yearly would prolong one's excitement.",
+          "D": "Planning multiple breaks throughout the year will add to one's happiness."
+         }
+        }
+       ]
+      },
+      {
+       "id": "c3",
+       "title": "Recording 3",
+       "cn": "讲座三",
+       "start": 1281.7,
+       "end": 1448.8,
+       "qstart": 1448.8,
+       "qend": 1519.5,
+       "questions": [
+        {
+         "no": 22,
+         "start": 1454.41,
+         "end": 1459.33,
+         "options": {
+          "A": "Surveying when drivers are caught in the heat of arguments.",
+          "B": "Designing devices to prevent drivers from being distracted.",
+          "C": "Testing models for monitoring drivers easily getting tired.",
+          "D": "Developing sensor-based systems for autonomous vehicles."
+         }
+        },
+        {
+         "no": 23,
+         "start": 1471.93,
+         "end": 1479.55,
+         "options": {
+          "A": "Make sure the autonomous vehicle operates in the simplest manner.",
+          "B": "Ensure the transition from the driver to the vehicle is safely made.",
+          "C": "Alleviate the driver's pressure as much as possible.",
+          "D": "Record the driver's state as accurately as possible."
+         }
+        },
+        {
+         "no": 24,
+         "start": 1492.15,
+         "end": 1499.66,
+         "options": {
+          "A": "Driver fatigue.",
+          "B": "Dreadful traffic.",
+          "C": "Drunk driving.",
+          "D": "Driving time."
+         }
+        },
+        {
+         "no": 25,
+         "start": 1512.26,
+         "end": 1519.5,
+         "options": {
+          "A": "There has been a strong debate on the feasibility of Level 3 cars.",
+          "B": "There have been few remarkable advances in auto technology.",
+          "C": "There has been a rise in attention-grabbing accidents recently.",
+          "D": "There have been few feasible ways to shift public sentiment."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "title": "2026 年 6 月 六级真题 · 第 2 套",
+   "short": "2026-06 · 第 2 套",
+   "audio": "audio/set2.mp3",
+   "duration": 1568.8,
+   "sections": [
+    {
+     "id": "A",
+     "name": "Section A",
+     "desc": "长对话",
+     "items": [
+      {
+       "id": "a1",
+       "title": "Conversation 1",
+       "cn": "长对话一",
+       "start": 36.6,
+       "end": 145.9,
+       "qstart": 145.9,
+       "qend": 208.3,
+       "questions": [
+        {
+         "no": 1,
+         "start": 146.17,
+         "end": 154.63,
+         "options": {
+          "A": "Celebrate his 10th wedding anniversary.",
+          "B": "Celebrate his promotion in Barcelona.",
+          "C": "Give his wife a pleasant surprise.",
+          "D": "Ask for leave to visit Barcelona."
+         }
+        },
+        {
+         "no": 2,
+         "start": 167.23,
+         "end": 172.71,
+         "options": {
+          "A": "He is unable to find some inexpensive accommodation.",
+          "B": "There are few warm places to go at this time of the year.",
+          "C": "There is so much for him to do before going on vacation.",
+          "D": "He is afraid Barcelona may not be so fabulous as expected."
+         }
+        },
+        {
+         "no": 3,
+         "start": 185.31,
+         "end": 189.9,
+         "options": {
+          "A": "Rent a car to drive into the city and scenic spots so as to save the expenses on transportation.",
+          "B": "Spend a couple of nights in a glamorous hotel and the rest of the week in inexpensive places.",
+          "C": "Find all-inclusive accommodation to eliminate the need to pay for food and drinks.",
+          "D": "Stay in a hotel away from the coast where the accommodation is less expensive."
+         }
+        },
+        {
+         "no": 4,
+         "start": 202.5,
+         "end": 208.3,
+         "options": {
+          "A": "She is sure to like the cathedral.",
+          "B": "She is a romantic at heart.",
+          "C": "She is no good at logistics.",
+          "D": "She is scared of heights."
+         }
+        }
+       ]
+      },
+      {
+       "id": "a2",
+       "title": "Conversation 2",
+       "cn": "长对话二",
+       "start": 219.8,
+       "end": 340.9,
+       "qstart": 340.9,
+       "qend": 404.0,
+       "questions": [
+        {
+         "no": 5,
+         "start": 345.92,
+         "end": 349.89,
+         "options": {
+          "A": "They often share each other's experiences.",
+          "B": "They enjoy interacting with patients.",
+          "C": "They always do things tricky.",
+          "D": "They are both pharmacists."
+         }
+        },
+        {
+         "no": 6,
+         "start": 362.49,
+         "end": 368.12,
+         "options": {
+          "A": "The doctor ended up admitting his mistake.",
+          "B": "The patient consulted another doctor.",
+          "C": "The patient actually took her advice.",
+          "D": "The doctor double-checked with her."
+         }
+        },
+        {
+         "no": 7,
+         "start": 380.72,
+         "end": 385.17,
+         "options": {
+          "A": "A proposal for applying flu shots more effectively.",
+          "B": "A new medication therapy management program.",
+          "C": "A novel strategy to persuade stubborn patients.",
+          "D": "A therapy for patients with similar conditions."
+         }
+        },
+        {
+         "no": 8,
+         "start": 397.77,
+         "end": 404.0,
+         "options": {
+          "A": "Inability to send text messages.",
+          "B": "Distrust in pharmaceutical experts.",
+          "C": "Medication non-adherence.",
+          "D": "Need for constant reminding."
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "name": "Section B",
+     "desc": "听力篇章",
+     "items": [
+      {
+       "id": "b1",
+       "title": "Passage 1",
+       "cn": "篇章一",
+       "start": 444.1,
+       "end": 565.3,
+       "qstart": 565.3,
+       "qend": 617.4,
+       "questions": [
+        {
+         "no": 9,
+         "start": 570.29,
+         "end": 576.61,
+         "options": {
+          "A": "Accomplish their goals.",
+          "B": "View things positively.",
+          "C": "Overstate their importance.",
+          "D": "Dominate job interviews."
+         }
+        },
+        {
+         "no": 10,
+         "start": 589.21,
+         "end": 597.3,
+         "options": {
+          "A": "It reflects a strong sense of obligation to others.",
+          "B": "It signifies a universal model of motivation.",
+          "C": "It may differ in various cultures.",
+          "D": "It may have been underestimated."
+         }
+        },
+        {
+         "no": 11,
+         "start": 609.9,
+         "end": 617.4,
+         "options": {
+          "A": "It was under-investigated.",
+          "B": "It was more predictable.",
+          "C": "It was taken for granted.",
+          "D": "It was more subtle."
+         }
+        }
+       ]
+      },
+      {
+       "id": "b2",
+       "title": "Passage 2",
+       "cn": "篇章二",
+       "start": 632.0,
+       "end": 746.4,
+       "qstart": 746.4,
+       "qend": 813.2,
+       "questions": [
+        {
+         "no": 12,
+         "start": 751.55,
+         "end": 756.51,
+         "options": {
+          "A": "It is any incidental happening in plants and animals or ice crystals.",
+          "B": "It is any basic physical or chemical work in designing substances.",
+          "C": "It is any symmetrical and colorful stripes or spots on organisms.",
+          "D": "It is any regularly repeated arrangement of shapes or colors."
+         }
+        },
+        {
+         "no": 13,
+         "start": 769.11,
+         "end": 774.89,
+         "options": {
+          "A": "Materials undergoing certain processes.",
+          "B": "Materials exposed to various natural forces.",
+          "C": "Materials impacted by any change of molecules.",
+          "D": "Materials going through extremely radical transformations."
+         }
+        },
+        {
+         "no": 14,
+         "start": 787.49,
+         "end": 793.93,
+         "options": {
+          "A": "The beauty of molecular clustering.",
+          "B": "The way for appreciating patterns.",
+          "C": "The creation of patterns.",
+          "D": "The factors affecting clusters."
+         }
+        },
+        {
+         "no": 15,
+         "start": 806.53,
+         "end": 813.2,
+         "options": {
+          "A": "A pattern by accident.",
+          "B": "Patterns for specific purposes.",
+          "C": "Patterns with random imperfections.",
+          "D": "A pattern with artificial intervention."
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "name": "Section C",
+     "desc": "讲座 / 讲话",
+     "items": [
+      {
+       "id": "c1",
+       "title": "Recording 1",
+       "cn": "讲座一",
+       "start": 852.3,
+       "end": 1014.1,
+       "qstart": 1014.1,
+       "qend": 1064.0,
+       "questions": [
+        {
+         "no": 16,
+         "start": 1018.0,
+         "end": 1024.55,
+         "options": {
+          "A": "Eliminating all the old habits at once.",
+          "B": "Making a permanent lifestyle change.",
+          "C": "Realizing all the life goals one has set.",
+          "D": "Improving multiple areas of one's life."
+         }
+        },
+        {
+         "no": 17,
+         "start": 1037.15,
+         "end": 1044.15,
+         "options": {
+          "A": "They were more likely to implement a particular behavior.",
+          "B": "They were more likely to make plans for their future.",
+          "C": "They tended to be committed to a single goal.",
+          "D": "They tended to focus on one thing at a time."
+         }
+        },
+        {
+         "no": 18,
+         "start": 1056.75,
+         "end": 1064.0,
+         "options": {
+          "A": "The ability to make the process automatic.",
+          "B": "A practical timetable for implementation.",
+          "C": "A lot of conscious effort to remember to do it.",
+          "D": "Concentration on the benefits it will provide."
+         }
+        }
+       ]
+      },
+      {
+       "id": "c2",
+       "title": "Recording 2",
+       "cn": "讲座二",
+       "start": 1076.2,
+       "end": 1261.1,
+       "qstart": 1261.1,
+       "qend": 1310.8,
+       "questions": [
+        {
+         "no": 19,
+         "start": 1266.7,
+         "end": 1273.36,
+         "options": {
+          "A": "It resembles that of Earth in many inconceivable ways.",
+          "B": "It has a haze much thicker than previously believed.",
+          "C": "It is 333.4 °F cooler than earlier estimates.",
+          "D": "It is far beyond any quick measurements."
+         }
+        },
+        {
+         "no": 20,
+         "start": 1285.96,
+         "end": 1291.3,
+         "options": {
+          "A": "The accumulation of solid particles in the air.",
+          "B": "The distribution of gases in its atmosphere.",
+          "C": "The clouds of particles reflecting sun rays.",
+          "D": "The aggravated effects of climate change."
+         }
+        },
+        {
+         "no": 21,
+         "start": 1303.9,
+         "end": 1310.8,
+         "options": {
+          "A": "If spectrums of light can be better detected by telescope.",
+          "B": "If Pluto's hazy atmosphere can be more easily observed.",
+          "C": "If Pluto's hazy atmosphere scatters strong sunlight.",
+          "D": "If the light from the telescope confirms their idea."
+         }
+        }
+       ]
+      },
+      {
+       "id": "c3",
+       "title": "Recording 3",
+       "cn": "讲座三",
+       "start": 1321.7,
+       "end": 1480.3,
+       "qstart": 1480.3,
+       "qend": 1552.0,
+       "questions": [
+        {
+         "no": 22,
+         "start": 1480.59,
+         "end": 1492.59,
+         "options": {
+          "A": "Parents can play a decisive role in cultivating their children's musical talent.",
+          "B": "Children are embarrassed by parents' failure to appreciate their music.",
+          "C": "Parents can mould their 8- to 10-year-old children's music taste.",
+          "D": "Children aged 8 to 10 are old enough to produce poetic lyrics."
+         }
+        },
+        {
+         "no": 23,
+         "start": 1505.29,
+         "end": 1511.27,
+         "options": {
+          "A": "They start to show their own musical preference.",
+          "B": "They tend to be more influenced by their peers.",
+          "C": "They tend to gravitate away from their homes.",
+          "D": "They are more open to new genres of music."
+         }
+        },
+        {
+         "no": 24,
+         "start": 1523.87,
+         "end": 1531.95,
+         "options": {
+          "A": "Enabling children to be receptive to music experts' suggestions.",
+          "B": "Helping children develop the ability to manage their emotions.",
+          "C": "Familiarising children with different schools of music.",
+          "D": "Introducing children to a variety of musical styles."
+         }
+        },
+        {
+         "no": 25,
+         "start": 1544.55,
+         "end": 1552.0,
+         "options": {
+          "A": "By enhancing children's appreciation of their music.",
+          "B": "By pushing their music hard enough upon children.",
+          "C": "By attending their concerts and live music events with children.",
+          "D": "By introducing their music to children as early as possible."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "title": "2025 年 12 月 六级真题 · 第 1 套",
+   "short": "2025-12 · 第 1 套",
+   "audio": "audio/set3.mp3",
+   "duration": 1543.2,
+   "sections": [
+    {
+     "id": "A",
+     "name": "Section A",
+     "desc": "长对话",
+     "items": [
+      {
+       "id": "a1",
+       "title": "Conversation 1",
+       "cn": "长对话一",
+       "start": 36.1,
+       "end": 157.4,
+       "qstart": 157.4,
+       "qend": 227.0,
+       "questions": [
+        {
+         "no": 1,
+         "start": 161.69,
+         "end": 166.03,
+         "options": {
+          "A": "He has distinguished himself in foreign service.",
+          "B": "He is his country's ambassador to Winopia.",
+          "C": "He is currently an electrical engineer.",
+          "D": "He craves attention from the media."
+         }
+        },
+        {
+         "no": 2,
+         "start": 179.23,
+         "end": 184.88,
+         "options": {
+          "A": "A government reshuffle.",
+          "B": "A fundamental reform.",
+          "C": "Some sort of political reorientation.",
+          "D": "Some sort of crisis of legitimacy."
+         }
+        },
+        {
+         "no": 3,
+         "start": 198.0,
+         "end": 203.6,
+         "options": {
+          "A": "All diplomats have more or less similar stories to tell.",
+          "B": "It is a prerequisite to get some practice in diplomacy.",
+          "C": "Different people can take different paths.",
+          "D": "It is a must to first obtain a law degree."
+         }
+        },
+        {
+         "no": 4,
+         "start": 216.87,
+         "end": 222.02,
+         "options": {
+          "A": "Key skills required of a diplomat.",
+          "B": "The making of an expert diplomat.",
+          "C": "Diplomatic discourse and rhetoric.",
+          "D": "Contributions by diplomatic envoys."
+         }
+        }
+       ]
+      },
+      {
+       "id": "a2",
+       "title": "Conversation 2",
+       "cn": "长对话二",
+       "start": 235.2,
+       "end": 344.5,
+       "qstart": 344.5,
+       "qend": 412.8,
+       "questions": [
+        {
+         "no": 5,
+         "start": 349.27,
+         "end": 353.24,
+         "options": {
+          "A": "They have got their work done.",
+          "B": "They both look tired",
+          "C": "They can meet again tomorrow anyway.",
+          "D": "They are both anxious to go home."
+         }
+        },
+        {
+         "no": 6,
+         "start": 366.31,
+         "end": 370.16,
+         "options": {
+          "A": "The board members' insufficient support.",
+          "B": "Two months devoted to the same contract.",
+          "C": "Working two months without any progress.",
+          "D": "The man's long concentration on the project."
+         }
+        },
+        {
+         "no": 7,
+         "start": 383.05,
+         "end": 389.05,
+         "options": {
+          "A": "Unprofessional.",
+          "B": "Inspirational.",
+          "C": "Exceptional.",
+          "D": "Delusional."
+         }
+        },
+        {
+         "no": 8,
+         "start": 402.11,
+         "end": 407.83,
+         "options": {
+          "A": "Fewer rectifications of the contract.",
+          "B": "More support from the board members.",
+          "C": "The early implementation of the project.",
+          "D": "The alignment of all sections of the contract."
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "name": "Section B",
+     "desc": "听力篇章",
+     "items": [
+      {
+       "id": "b1",
+       "title": "Passage 1",
+       "cn": "篇章一",
+       "start": 449.9,
+       "end": 549.9,
+       "qstart": 549.9,
+       "qend": 603.7,
+       "questions": [
+        {
+         "no": 9,
+         "start": 554.08,
+         "end": 558.37,
+         "options": {
+          "A": "When two employees propose contrary solutions to their dispute.",
+          "B": "When two employees are directed by their respective manager.",
+          "C": "When two people behave in an apparently clashing manner.",
+          "D": "When two people tell different stories of the same event."
+         }
+        },
+        {
+         "no": 10,
+         "start": 571.57,
+         "end": 577.97,
+         "options": {
+          "A": "How it got resolved.",
+          "B": "How it happened.",
+          "C": "What it was about.",
+          "D": "When it was settled."
+         }
+        },
+        {
+         "no": 11,
+         "start": 591.16,
+         "end": 598.66,
+         "options": {
+          "A": "They intervened promptly lest their dispute escalate.",
+          "B": "They tried to ascertain the actual facts of the matter.",
+          "C": "They assumed the best about them and moved on.",
+          "D": "They persuaded them to put their conflict aside."
+         }
+        }
+       ]
+      },
+      {
+       "id": "b2",
+       "title": "Passage 2",
+       "cn": "篇章二",
+       "start": 611.4,
+       "end": 731.7,
+       "qstart": 731.7,
+       "qend": 801.7,
+       "questions": [
+        {
+         "no": 12,
+         "start": 736.0,
+         "end": 741.49,
+         "options": {
+          "A": "Dine out daily.",
+          "B": "Budget sensibly.",
+          "C": "Enjoy cooking.",
+          "D": "Shop at groceries."
+         }
+        },
+        {
+         "no": 13,
+         "start": 754.52,
+         "end": 759.1,
+         "options": {
+          "A": "Shopping.",
+          "B": "Sewing.",
+          "C": "Entertaining oneself.",
+          "D": "Fashion designing."
+         }
+        },
+        {
+         "no": 14,
+         "start": 772.13,
+         "end": 776.88,
+         "options": {
+          "A": "Satisfy their taste.",
+          "B": "Cut down expenses.",
+          "C": "Eat more healthily.",
+          "D": "Cultivate new hobbies."
+         }
+        },
+        {
+         "no": 15,
+         "start": 789.94,
+         "end": 796.72,
+         "options": {
+          "A": "People's intense focus on convenience.",
+          "B": "People's deteriorating family finances.",
+          "C": "People's strong aversion to junk foods.",
+          "D": "People's increasing dislike of cooking."
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "name": "Section C",
+     "desc": "讲座 / 讲话",
+     "items": [
+      {
+       "id": "c1",
+       "title": "Recording 1",
+       "cn": "讲座一",
+       "start": 834.2,
+       "end": 992.4,
+       "qstart": 992.4,
+       "qend": 1045.6,
+       "questions": [
+        {
+         "no": 16,
+         "start": 996.81,
+         "end": 1002.96,
+         "options": {
+          "A": "Its owner's flight is delayed because of bad weather.",
+          "B": "Airlines cannot find its owner without an ID tag on it.",
+          "C": "Airline staff have not correctly coded its destination tag.",
+          "D": "Its owner has forgot to pick it up from the baggage claim."
+         }
+        },
+        {
+         "no": 17,
+         "start": 1016.08,
+         "end": 1022.73,
+         "options": {
+          "A": "Its tag may get torn off on the conveyor belt.",
+          "B": "Its tag may get stuck in the sorting machine.",
+          "C": "It may be sent to a wrong destination.",
+          "D": "It may be picked up by someone else."
+         }
+        },
+        {
+         "no": 18,
+         "start": 1035.83,
+         "end": 1040.63,
+         "options": {
+          "A": "Purchase irretrievably lost things at auction.",
+          "B": "Contact the airport staff to find our missing bag.",
+          "C": "Get the airline agent's phone number before boarding.",
+          "D": "Avoid packing valuable items in our checked baggage."
+         }
+        }
+       ]
+      },
+      {
+       "id": "c2",
+       "title": "Recording 2",
+       "cn": "讲座二",
+       "start": 1053.5,
+       "end": 1230.2,
+       "qstart": 1230.2,
+       "qend": 1288.2,
+       "questions": [
+        {
+         "no": 19,
+         "start": 1235.2,
+         "end": 1241.78,
+         "options": {
+          "A": "It can be behaviorally hazardous.",
+          "B": "It can be especially disappointing.",
+          "C": "It can be socially harmful.",
+          "D": "It can be really embarrassing."
+         }
+        },
+        {
+         "no": 20,
+         "start": 1254.85,
+         "end": 1261.75,
+         "options": {
+          "A": "They considered it inevitable.",
+          "B": "They held a negative view towards it.",
+          "C": "They were concerned with its effects.",
+          "D": "They saw it as a sign of social evolution."
+         }
+        },
+        {
+         "no": 21,
+         "start": 1275.02,
+         "end": 1283.2,
+         "options": {
+          "A": "Elaborate forms of social contact.",
+          "B": "Ill effects on one's sense of pride.",
+          "C": "Poor relationships with others.",
+          "D": "Vicious cycles of detachment."
+         }
+        }
+       ]
+      },
+      {
+       "id": "c3",
+       "title": "Recording 3",
+       "cn": "讲座三",
+       "start": 1296.2,
+       "end": 1458.7,
+       "qstart": 1458.7,
+       "qend": 1546.2,
+       "questions": [
+        {
+         "no": 22,
+         "start": 1464.3,
+         "end": 1469.55,
+         "options": {
+          "A": "The ill treatment they get as tourists.",
+          "B": "The nonprofessional business they see.",
+          "C": "The impersonal accommodations.",
+          "D": "The many adventures on their way."
+         }
+        },
+        {
+         "no": 23,
+         "start": 1482.71,
+         "end": 1487.34,
+         "options": {
+          "A": "They have been the classic way to visit Europe.",
+          "B": "They attract tourists with location and decoration.",
+          "C": "They have long been competing with chain hotels.",
+          "D": "They are in fact a completely new idea in America."
+         }
+        },
+        {
+         "no": 24,
+         "start": 1500.44,
+         "end": 1506.88,
+         "options": {
+          "A": "Your financial status.",
+          "B": "Your family's consent.",
+          "C": "Your property.",
+          "D": "Your personality."
+         }
+        },
+        {
+         "no": 25,
+         "start": 1520.17,
+         "end": 1541.2,
+         "options": {
+          "A": "Costs for starting the business.",
+          "B": "The number of guests to receive.",
+          "C": "The facilities to provide.",
+          "D": "Opportunities for income."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "title": "2025 年 12 月 六级真题 · 第 2 套",
+   "short": "2025-12 · 第 2 套",
+   "audio": "audio/set4.mp3",
+   "duration": 1554.4,
+   "sections": [
+    {
+     "id": "A",
+     "name": "Section A",
+     "desc": "长对话",
+     "items": [
+      {
+       "id": "a1",
+       "title": "Conversation 1",
+       "cn": "长对话一",
+       "start": 36.1,
+       "end": 153.2,
+       "qstart": 153.2,
+       "qend": 223.1,
+       "questions": [
+        {
+         "no": 1,
+         "start": 157.69,
+         "end": 162.56,
+         "options": {
+          "A": "It is absurdly expensive.",
+          "B": "It is appropriately priced.",
+          "C": "It brings shame on the university.",
+          "D": "It caters to students and teachers."
+         }
+        },
+        {
+         "no": 2,
+         "start": 175.63,
+         "end": 182.18,
+         "options": {
+          "A": "They never really appeal to her.",
+          "B": "They are never actually good value.",
+          "C": "They are within students' budgets.",
+          "D": "They always come at a high speed."
+         }
+        },
+        {
+         "no": 3,
+         "start": 195.28,
+         "end": 200.63,
+         "options": {
+          "A": "The food.",
+          "B": "The space.",
+          "C": "The speed.",
+          "D": "The environment."
+         }
+        },
+        {
+         "no": 4,
+         "start": 213.72,
+         "end": 218.12,
+         "options": {
+          "A": "A complete refurnishing.",
+          "B": "A ruinous burning down.",
+          "C": "A substantial expansion.",
+          "D": "A massive renovation."
+         }
+        }
+       ]
+      },
+      {
+       "id": "a2",
+       "title": "Conversation 2",
+       "cn": "长对话二",
+       "start": 231.2,
+       "end": 347.0,
+       "qstart": 347.0,
+       "qend": 421.7,
+       "questions": [
+        {
+         "no": 5,
+         "start": 352.05,
+         "end": 359.36,
+         "options": {
+          "A": "They have a poor work ethic.",
+          "B": "They don't get along with managers.",
+          "C": "They are struggling in the workplace.",
+          "D": "They aren't as varied as their predecessors."
+         }
+        },
+        {
+         "no": 6,
+         "start": 372.45,
+         "end": 378.83,
+         "options": {
+          "A": "Learning about the way they adhere to their own values.",
+          "B": "Recognizing how they try to strike a work-life balance.",
+          "C": "Knowing how they struggle to connect with managers.",
+          "D": "Understanding the way they seek career advancement."
+         }
+        },
+        {
+         "no": 7,
+         "start": 392.11,
+         "end": 398.19,
+         "options": {
+          "A": "In terms of the number of hours spent.",
+          "B": "By the amount of work they perform.",
+          "C": "In terms of the work done in 8 hours.",
+          "D": "By the quality of the work they do."
+         }
+        },
+        {
+         "no": 8,
+         "start": 411.37,
+         "end": 416.68,
+         "options": {
+          "A": "Those whose culture facilitates their advancement.",
+          "B": "Those allowing them to do projects of their choice.",
+          "C": "Those whose values align with their own.",
+          "D": "Those refraining from discrediting their perspectives."
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "name": "Section B",
+     "desc": "听力篇章",
+     "items": [
+      {
+       "id": "b1",
+       "title": "Passage 1",
+       "cn": "篇章一",
+       "start": 458.9,
+       "end": 578.2,
+       "qstart": 578.2,
+       "qend": 632.9,
+       "questions": [
+        {
+         "no": 9,
+         "start": 582.63,
+         "end": 589.94,
+         "options": {
+          "A": "They may unconsciously help customers choose greener dishes.",
+          "B": "They may unintentionally encourage customers to eat meat.",
+          "C": "They raise customers' environmental awareness.",
+          "D": "They enable customers to eat in a healthy way."
+         }
+        },
+        {
+         "no": 10,
+         "start": 602.97,
+         "end": 608.64,
+         "options": {
+          "A": "By inviting them to taste different kinds of food.",
+          "B": "By observing the eating behavior of strict vegetarians.",
+          "C": "By comparing participants eating vegetarian food frequently with those doing so rarely.",
+          "D": "By requiring participants to choose a meal as if they were feasting at a family gathering."
+         }
+        },
+        {
+         "no": 11,
+         "start": 621.7,
+         "end": 627.9,
+         "options": {
+          "A": "They are less likely to choose a vegetarian dish.",
+          "B": "They find vegetarian dishes become more appealing.",
+          "C": "They tend to consume larger portions of unhealthy food.",
+          "D": "They are less likely to choose dishes recommended by chefs."
+         }
+        }
+       ]
+      },
+      {
+       "id": "b2",
+       "title": "Passage 2",
+       "cn": "篇章二",
+       "start": 640.5,
+       "end": 748.5,
+       "qstart": 748.5,
+       "qend": 826.4,
+       "questions": [
+        {
+         "no": 12,
+         "start": 753.49,
+         "end": 761.76,
+         "options": {
+          "A": "They have found a solution to the global problem of air pollution.",
+          "B": "They have managed to freeze polluting particles to around –18 °C.",
+          "C": "They have been seeking a way to prevent pollutants from penetrating indoors.",
+          "D": "They have been cooperating closely on developing a new type of air-conditioner."
+         }
+        },
+        {
+         "no": 13,
+         "start": 774.83,
+         "end": 781.93,
+         "options": {
+          "A": "They can be costly and inefficient.",
+          "B": "They are constantly being perfected.",
+          "C": "They are by-products of health research.",
+          "D": "They can save over 40,000 lives each year."
+         }
+        },
+        {
+         "no": 14,
+         "start": 795.1,
+         "end": 800.65,
+         "options": {
+          "A": "They keep their windows closed.",
+          "B": "They spend a lot more time indoors.",
+          "C": "They make more use of air-conditioners.",
+          "D": "They try various ways to purify indoor air."
+         }
+        },
+        {
+         "no": 15,
+         "start": 813.94,
+         "end": 821.44,
+         "options": {
+          "A": "It shows the importance of eliminating indoor pollution.",
+          "B": "It may change the way of future environmental research.",
+          "C": "It demonstrates the fruitful cooperation between UK and Chinese scientists.",
+          "D": "It may make household appliances serve an additional air cleaner function."
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "name": "Section C",
+     "desc": "讲座 / 讲话",
+     "items": [
+      {
+       "id": "c1",
+       "title": "Recording 1",
+       "cn": "讲座一",
+       "start": 859.0,
+       "end": 1027.9,
+       "qstart": 1027.9,
+       "qend": 1080.2,
+       "questions": [
+        {
+         "no": 16,
+         "start": 1032.88,
+         "end": 1037.21,
+         "options": {
+          "A": "It distinguishes different species of animals.",
+          "B": "It reflects distinct traits in animal behavior.",
+          "C": "It demonstrates animals' ability to recognize themselves.",
+          "D": "It gauges the level of intelligence of various animal species."
+         }
+        },
+        {
+         "no": 17,
+         "start": 1050.37,
+         "end": 1057.05,
+         "options": {
+          "A": "It meets few of the behavioral criteria set in the mirror test.",
+          "B": "It behaves similarly to animals capable of self-recognition.",
+          "C": "It removes marks from itself to show self-awareness.",
+          "D": "It matches children over 18 months in intelligence."
+         }
+        },
+        {
+         "no": 18,
+         "start": 1070.12,
+         "end": 1075.23,
+         "options": {
+          "A": "They have conclusively established the criteria of animal intelligence.",
+          "B": "They have advanced the concept of self-awareness to a higher level.",
+          "C": "They incorporate more perspectives than one.",
+          "D": "They raise more questions than answers."
+         }
+        }
+       ]
+      },
+      {
+       "id": "c2",
+       "title": "Recording 2",
+       "cn": "讲座二",
+       "start": 1088.0,
+       "end": 1259.3,
+       "qstart": 1259.3,
+       "qend": 1316.1,
+       "questions": [
+        {
+         "no": 19,
+         "start": 1264.51,
+         "end": 1270.06,
+         "options": {
+          "A": "Small children are even more keen on screens than their elders.",
+          "B": "Both parents and children preferred to read electronic books.",
+          "C": "Parents differed from children in reading behavior.",
+          "D": "Children reading electronic books learned more."
+         }
+        },
+        {
+         "no": 20,
+         "start": 1283.65,
+         "end": 1290.1,
+         "options": {
+          "A": "They came to conflicting conclusions.",
+          "B": "They were based on small samples.",
+          "C": "They yielded unanticipated findings.",
+          "D": "They were focused on younger kids."
+         }
+        },
+        {
+         "no": 21,
+         "start": 1303.53,
+         "end": 1311.08,
+         "options": {
+          "A": "Those that prove simple enough for them to comprehend.",
+          "B": "Those that produce both audio and visual effects on them.",
+          "C": "Those that draw their attention to the educational content.",
+          "D": "Those that contribute to their increased interest in reading."
+         }
+        }
+       ]
+      },
+      {
+       "id": "c3",
+       "title": "Recording 3",
+       "cn": "讲座三",
+       "start": 1323.9,
+       "end": 1470.7,
+       "qstart": 1470.7,
+       "qend": 1557.4,
+       "questions": [
+        {
+         "no": 22,
+         "start": 1476.52,
+         "end": 1482.0,
+         "options": {
+          "A": "Regret having wasted much time in making them.",
+          "B": "Think how different we could have made them.",
+          "C": "Keep ourselves from regretting them.",
+          "D": "Live with them for the time being."
+         }
+        },
+        {
+         "no": 23,
+         "start": 1495.1,
+         "end": 1501.1,
+         "options": {
+          "A": "It has made us the person we are now.",
+          "B": "It has been made with a lot of thinking.",
+          "C": "It stems from our valuable knowledge.",
+          "D": "It benefits us greatly one way or another."
+         }
+        },
+        {
+         "no": 24,
+         "start": 1514.25,
+         "end": 1519.0,
+         "options": {
+          "A": "Challenging things to do.",
+          "B": "Beautiful things to share.",
+          "C": "Choices to make.",
+          "D": "Lessons to learn."
+         }
+        },
+        {
+         "no": 25,
+         "start": 1531.93,
+         "end": 1552.4,
+         "options": {
+          "A": "Foreseeing the possibility for regret later.",
+          "B": "Making proper use of the lessons learned.",
+          "C": "Perfecting the decision-making strategies.",
+          "D": "Seeing them as obstacles to moving forward."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "title": "2025 年 6 月 六级真题 · 第 1 套",
+   "short": "2025-06 · 第 1 套",
+   "audio": "audio/set5.mp3",
+   "duration": 1558.1,
+   "sections": [
+    {
+     "id": "A",
+     "name": "Section A",
+     "desc": "长对话",
+     "items": [
+      {
+       "id": "a1",
+       "title": "Conversation 1",
+       "cn": "长对话一",
+       "start": 39.5,
+       "end": 148.2,
+       "qstart": 148.2,
+       "qend": 215.7,
+       "questions": [
+        {
+         "no": 1,
+         "start": 153.04,
+         "end": 156.99,
+         "options": {
+          "A": "Met the computer technician.",
+          "B": "Told the man about her trouble.",
+          "C": "Called the man's company.",
+          "D": "Visited Alpha Maintenance."
+         }
+        },
+        {
+         "no": 2,
+         "start": 170.46,
+         "end": 174.89,
+         "options": {
+          "A": "Consulted someone in charge.",
+          "B": "Came as soon as possible.",
+          "C": "Informed the central office at once.",
+          "D": "Designated an engineer to the case."
+         }
+        },
+        {
+         "no": 3,
+         "start": 188.06,
+         "end": 193.5,
+         "options": {
+          "A": "Frustration.",
+          "B": "Intimidation.",
+          "C": "Desperation.",
+          "D": "Indignation."
+         }
+        },
+        {
+         "no": 4,
+         "start": 206.64,
+         "end": 210.7,
+         "options": {
+          "A": "Whether the contents have been backed up.",
+          "B": "Whether they can find help somewhere else.",
+          "C": "Whether all data stored on the hard drive has got lost.",
+          "D": "Whether they need to wipe the system directories clean."
+         }
+        }
+       ]
+      },
+      {
+       "id": "a2",
+       "title": "Conversation 2",
+       "cn": "长对话二",
+       "start": 224.0,
+       "end": 342.2,
+       "qstart": 342.2,
+       "qend": 412.8,
+       "questions": [
+        {
+         "no": 5,
+         "start": 347.11,
+         "end": 351.56,
+         "options": {
+          "A": "It's boring.",
+          "B": "It's challenging.",
+          "C": "It's a beautiful thing.",
+          "D": "It's unlike most jobs."
+         }
+        },
+        {
+         "no": 6,
+         "start": 364.43,
+         "end": 369.56,
+         "options": {
+          "A": "Arbitrating between disagreeing solicitors.",
+          "B": "Preventing disputes from escalating.",
+          "C": "Buying and selling property.",
+          "D": "Mediating land disputes."
+         }
+        },
+        {
+         "no": 7,
+         "start": 382.67,
+         "end": 390.02,
+         "options": {
+          "A": "Courts are intended for fixing major legal disputes.",
+          "B": "Courts are getting too bureaucratic to function.",
+          "C": "Courts can be frustrating and expensive.",
+          "D": "Courts can be frightening and arbitrary."
+         }
+        },
+        {
+         "no": 8,
+         "start": 403.14,
+         "end": 407.79,
+         "options": {
+          "A": "The ability to make arguments in a unique way.",
+          "B": "The skill of preventing conflicts between parties concerned.",
+          "C": "The skill of foreseeing any potential stakes in their work.",
+          "D": "The ability to express themselves clearly and forcefully."
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "name": "Section B",
+     "desc": "听力篇章",
+     "items": [
+      {
+       "id": "b1",
+       "title": "Passage 1",
+       "cn": "篇章一",
+       "start": 449.8,
+       "end": 567.9,
+       "qstart": 567.9,
+       "qend": 621.0,
+       "questions": [
+        {
+         "no": 9,
+         "start": 572.45,
+         "end": 579.68,
+         "options": {
+          "A": "They looked into the relationship between one's prior knowledge and creativity.",
+          "B": "They offered novel ways to help older adults to keep their memories from aging.",
+          "C": "They proposed an explanation for old people's difficulty in retrieving memories.",
+          "D": "They advanced a new model concerning human information storage and retrieval."
+         }
+        },
+        {
+         "no": 10,
+         "start": 592.76,
+         "end": 597.91,
+         "options": {
+          "A": "Young adults rely on memory while older adults keep notes as a reminder.",
+          "B": "Older adults often retrieve irrelevant memories along with what they want.",
+          "C": "Young adults accumulate knowledge much more quickly than older adults.",
+          "D": "Older adults generally perform cognitive tasks much slower than young adults."
+         }
+        },
+        {
+         "no": 11,
+         "start": 610.85,
+         "end": 616.02,
+         "options": {
+          "A": "They show preserved, and sometimes enhanced, creativity.",
+          "B": "They frequently suffer from disorderly crowded memories.",
+          "C": "They can rely on their accumulated wisdom in an emergency.",
+          "D": "They may well be served by forgetting their prior knowledge."
+         }
+        }
+       ]
+      },
+      {
+       "id": "b2",
+       "title": "Passage 2",
+       "cn": "篇章二",
+       "start": 628.4,
+       "end": 743.6,
+       "qstart": 743.6,
+       "qend": 812.3,
+       "questions": [
+        {
+         "no": 12,
+         "start": 748.39,
+         "end": 753.34,
+         "options": {
+          "A": "They are actually proud of the goods and services they produce.",
+          "B": "They are worried about being alienated from the outside world.",
+          "C": "They are rarely in control of many things related to their work.",
+          "D": "They are longing to share the profits made from their work."
+         }
+        },
+        {
+         "no": 13,
+         "start": 766.53,
+         "end": 772.18,
+         "options": {
+          "A": "The steady decrease in productivity.",
+          "B": "The adverse effect on physical health.",
+          "C": "The feeling of being time-poor.",
+          "D": "The rising economic inequality."
+         }
+        },
+        {
+         "no": 14,
+         "start": 785.33,
+         "end": 789.83,
+         "options": {
+          "A": "It alters the structure of work.",
+          "B": "It puts jobs and wages at risk.",
+          "C": "It liberates people from tedious and laborious work.",
+          "D": "It creates new work opportunities in the IT industry."
+         }
+        },
+        {
+         "no": 15,
+         "start": 803.01,
+         "end": 807.33,
+         "options": {
+          "A": "Finding meaning in work.",
+          "B": "Prioritizing life over work.",
+          "C": "Improving relationships in the community.",
+          "D": "Realizing one's social value in the workplace."
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "name": "Section C",
+     "desc": "讲座 / 讲话",
+     "items": [
+      {
+       "id": "c1",
+       "title": "Recording 1",
+       "cn": "讲座一",
+       "start": 846.4,
+       "end": 1027.7,
+       "qstart": 1027.7,
+       "qend": 1082.2,
+       "questions": [
+        {
+         "no": 16,
+         "start": 1033.75,
+         "end": 1040.05,
+         "options": {
+          "A": "Affect our attitude to novel tasks.",
+          "B": "Distinguish us in the social world.",
+          "C": "Outweigh IQ in importance.",
+          "D": "Impact academic achievements."
+         }
+        },
+        {
+         "no": 17,
+         "start": 1053.07,
+         "end": 1058.52,
+         "options": {
+          "A": "By pressing a hidden button.",
+          "B": "By pushing a big button on top.",
+          "C": "By pressing two buttons at the same time.",
+          "D": "By helping the babies push the right button."
+         }
+        },
+        {
+         "no": 18,
+         "start": 1071.81,
+         "end": 1077.24,
+         "options": {
+          "A": "Perform difficult tasks successfully just by observing how adults acted.",
+          "B": "Make generalizable inferences about persistence from a few examples.",
+          "C": "Adapt themselves to different social contexts.",
+          "D": "Work hard to interact with experimenters."
+         }
+        }
+       ]
+      },
+      {
+       "id": "c2",
+       "title": "Recording 2",
+       "cn": "讲座二",
+       "start": 1089.9,
+       "end": 1247.9,
+       "qstart": 1247.9,
+       "qend": 1301.2,
+       "questions": [
+        {
+         "no": 19,
+         "start": 1253.51,
+         "end": 1258.32,
+         "options": {
+          "A": "Offering advice on overcoming habitual lateness.",
+          "B": "Exemplifying various recreational opportunities.",
+          "C": "Scrutinizing individuals' defining traits.",
+          "D": "Suggesting ways for setting priorities."
+         }
+        },
+        {
+         "no": 20,
+         "start": 1271.45,
+         "end": 1276.29,
+         "options": {
+          "A": "Make the breakfast simpler.",
+          "B": "Take the alarms seriously.",
+          "C": "Ready yourself in the early dawn.",
+          "D": "Get prepared the night before."
+         }
+        },
+        {
+         "no": 21,
+         "start": 1289.2,
+         "end": 1296.2,
+         "options": {
+          "A": "Finish the prior task 30 minutes earlier.",
+          "B": "Keep ourselves from hitting a bump.",
+          "C": "Leave time in between activities.",
+          "D": "Try to avoid possible hold-ups."
+         }
+        }
+       ]
+      },
+      {
+       "id": "c3",
+       "title": "Recording 3",
+       "cn": "讲座三",
+       "start": 1309.0,
+       "end": 1472.9,
+       "qstart": 1472.9,
+       "qend": 1561.1,
+       "questions": [
+        {
+         "no": 22,
+         "start": 1478.52,
+         "end": 1483.6,
+         "options": {
+          "A": "Their lifestyles vary.",
+          "B": "Their traits vary.",
+          "C": "They have different customs.",
+          "D": "They have different feels."
+         }
+        },
+        {
+         "no": 23,
+         "start": 1496.73,
+         "end": 1504.18,
+         "options": {
+          "A": "They are not as willing to help strangers.",
+          "B": "They are not as patient with one another.",
+          "C": "They violate traffic rules more frequently.",
+          "D": "They become more easily irritated in public."
+         }
+        },
+        {
+         "no": 24,
+         "start": 1517.55,
+         "end": 1524.1,
+         "options": {
+          "A": "It was practiced by Boston's founding fathers.",
+          "B": "It is not deemed exotic by Proper Bostonians.",
+          "C": "It was adopted by Boston's upper class.",
+          "D": "It is not part of Boston's local culture."
+         }
+        },
+        {
+         "no": 25,
+         "start": 1537.35,
+         "end": 1556.1,
+         "options": {
+          "A": "Stick to its own way of showing courtesy to strangers.",
+          "B": "Follow the examples set by Paris and New York City.",
+          "C": "Learn from the world's major cities in promoting tourism.",
+          "D": "Take pride in its history and adhere to its cultural tradition."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "title": "2025 年 6 月 六级真题 · 第 2 套",
+   "short": "2025-06 · 第 2 套",
+   "audio": "audio/set6.mp3",
+   "duration": 1567.8,
+   "sections": [
+    {
+     "id": "A",
+     "name": "Section A",
+     "desc": "长对话",
+     "items": [
+      {
+       "id": "a1",
+       "title": "Conversation 1",
+       "cn": "长对话一",
+       "start": 39.2,
+       "end": 158.3,
+       "qstart": 158.3,
+       "qend": 228.9,
+       "questions": [
+        {
+         "no": 1,
+         "start": 163.18,
+         "end": 167.93,
+         "options": {
+          "A": "They have to make a choice by the end of the day.",
+          "B": "Both candidates are very keen on getting the job.",
+          "C": "They hold different views on the procedure.",
+          "D": "Both candidates are quite competitive."
+         }
+        },
+        {
+         "no": 2,
+         "start": 181.25,
+         "end": 185.35,
+         "options": {
+          "A": "Both Rachel and Peter came across as respectful and professional.",
+          "B": "Rachel scored moderately higher grades than Peter at school.",
+          "C": "Both Rachel and Peter excelled in their academic pursuit.",
+          "D": "Peter appeared slightly stronger than Rachel physically."
+         }
+        },
+        {
+         "no": 3,
+         "start": 198.44,
+         "end": 205.94,
+         "options": {
+          "A": "His use of body language.",
+          "B": "His accumulation of experience.",
+          "C": "His unusual state of mind.",
+          "D": "His knowledge about the company."
+         }
+        },
+        {
+         "no": 4,
+         "start": 219.11,
+         "end": 223.89,
+         "options": {
+          "A": "Compare the candidates side by side again.",
+          "B": "Ask the board to cast the deciding vote.",
+          "C": "Find a way to break the tie next time.",
+          "D": "Let John make the final decision."
+         }
+        }
+       ]
+      },
+      {
+       "id": "a2",
+       "title": "Conversation 2",
+       "cn": "长对话二",
+       "start": 237.0,
+       "end": 360.1,
+       "qstart": 360.1,
+       "qend": 426.4,
+       "questions": [
+        {
+         "no": 5,
+         "start": 364.88,
+         "end": 368.9,
+         "options": {
+          "A": "The private label \"L'Orange\".",
+          "B": "The woman's latest collection.",
+          "C": "This season's new fashion.",
+          "D": "The head designer's role."
+         }
+        },
+        {
+         "no": 6,
+         "start": 381.92,
+         "end": 387.87,
+         "options": {
+          "A": "Something reflecting the social norms.",
+          "B": "Something meeting public expectations.",
+          "C": "Something slightly absurd.",
+          "D": "Something a bit ambiguous."
+         }
+        },
+        {
+         "no": 7,
+         "start": 400.82,
+         "end": 404.77,
+         "options": {
+          "A": "Merge styles often at opposite ends of the fashion spectrum.",
+          "B": "Learn from the designs of the Asian rural mountain villagers.",
+          "C": "Make velvet capes look both majestic and masculine.",
+          "D": "Draw intricate patterns onto a traditional power suit."
+         }
+        },
+        {
+         "no": 8,
+         "start": 417.92,
+         "end": 421.44,
+         "options": {
+          "A": "Obtaining the woman's signature.",
+          "B": "Seeing the woman's new creations.",
+          "C": "Incorporating indigenous aspects into his work.",
+          "D": "Sharing more ideas with the woman next time."
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "name": "Section B",
+     "desc": "听力篇章",
+     "items": [
+      {
+       "id": "b1",
+       "title": "Passage 1",
+       "cn": "篇章一",
+       "start": 463.2,
+       "end": 588.9,
+       "qstart": 588.9,
+       "qend": 644.6,
+       "questions": [
+        {
+         "no": 9,
+         "start": 593.9,
+         "end": 601.02,
+         "options": {
+          "A": "They could readily recognize their owner simply by looking.",
+          "B": "They could understand the implications of human commands.",
+          "C": "They could be domesticated to act as our companions.",
+          "D": "They could follow pointing gestures without training."
+         }
+        },
+        {
+         "no": 10,
+         "start": 613.94,
+         "end": 619.36,
+         "options": {
+          "A": "Cultivating them to be intelligent creatures.",
+          "B": "Training them to behave like domesticated dogs.",
+          "C": "Understanding how humans impact their behavior.",
+          "D": "Taking measures to reduce their numbers."
+         }
+        },
+        {
+         "no": 11,
+         "start": 632.26,
+         "end": 639.62,
+         "options": {
+          "A": "Tame them through repeated training.",
+          "B": "Treat them with sensitivity and respect.",
+          "C": "Make them responsive to our commands.",
+          "D": "Watch their behavior and try to improve it."
+         }
+        }
+       ]
+      },
+      {
+       "id": "b2",
+       "title": "Passage 2",
+       "cn": "篇章二",
+       "start": 652.0,
+       "end": 765.2,
+       "qstart": 765.2,
+       "qend": 838.5,
+       "questions": [
+        {
+         "no": 12,
+         "start": 770.22,
+         "end": 775.77,
+         "options": {
+          "A": "The temperature inside it varies from place to place.",
+          "B": "Proper placement facilitates access to food products.",
+          "C": "Its different shelves are designed for different purposes.",
+          "D": "The space in an average fridge changes from top to bottom."
+         }
+        },
+        {
+         "no": 13,
+         "start": 788.97,
+         "end": 794.94,
+         "options": {
+          "A": "To slow the rising of temperature in it.",
+          "B": "To provide a big box of evenly cold air.",
+          "C": "To prevent germs from growing quickly.",
+          "D": "To keep the food cold as long as possible."
+         }
+        },
+        {
+         "no": 14,
+         "start": 807.97,
+         "end": 813.5,
+         "options": {
+          "A": "On the top shelf.",
+          "B": "In the middle section.",
+          "C": "On the inside of its doors.",
+          "D": "At the back of its bottom shelf."
+         }
+        },
+        {
+         "no": 15,
+         "start": 826.43,
+         "end": 833.48,
+         "options": {
+          "A": "They will be extra-chilly.",
+          "B": "They will be hard to defrost.",
+          "C": "They will be contaminated.",
+          "D": "They will be ruined."
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "name": "Section C",
+     "desc": "讲座 / 讲话",
+     "items": [
+      {
+       "id": "c1",
+       "title": "Recording 1",
+       "cn": "讲座一",
+       "start": 872.4,
+       "end": 1025.5,
+       "qstart": 1025.5,
+       "qend": 1076.9,
+       "questions": [
+        {
+         "no": 16,
+         "start": 1030.51,
+         "end": 1036.16,
+         "options": {
+          "A": "Chronic depression.",
+          "B": "Growing feebleness.",
+          "C": "Hip fracture.",
+          "D": "Fatal infections."
+         }
+        },
+        {
+         "no": 17,
+         "start": 1049.05,
+         "end": 1054.5,
+         "options": {
+          "A": "It feels real and relevant.",
+          "B": "It contributes to psychology.",
+          "C": "It outcompetes lots of academics' research.",
+          "D": "It wins recognition outside of Birmingham."
+         }
+        },
+        {
+         "no": 18,
+         "start": 1067.59,
+         "end": 1071.94,
+         "options": {
+          "A": "By bringing together experts old and young.",
+          "B": "By counting on advanced modern technology.",
+          "C": "By making full use of her expertise.",
+          "D": "By combining multiple perspectives."
+         }
+        }
+       ]
+      },
+      {
+       "id": "c2",
+       "title": "Recording 2",
+       "cn": "讲座二",
+       "start": 1084.6,
+       "end": 1252.6,
+       "qstart": 1252.6,
+       "qend": 1309.4,
+       "questions": [
+        {
+         "no": 19,
+         "start": 1258.23,
+         "end": 1264.68,
+         "options": {
+          "A": "They don't teach basic organization.",
+          "B": "They don't focus on teaching techniques.",
+          "C": "They attach little importance to recipes.",
+          "D": "They hire very few distinguished chefs."
+         }
+        },
+        {
+         "no": 20,
+         "start": 1277.92,
+         "end": 1285.67,
+         "options": {
+          "A": "It's unique to celebrity chefs.",
+          "B": "It's a way of transformation.",
+          "C": "It's too demanding for them.",
+          "D": "It's a way of life to them."
+         }
+        },
+        {
+         "no": 21,
+         "start": 1299.13,
+         "end": 1304.38,
+         "options": {
+          "A": "Respect others so as to be respected.",
+          "B": "Use time and resources in a wise way.",
+          "C": "Cultivate a habit of self-discipline.",
+          "D": "Learn from philosophers earnestly."
+         }
+        }
+       ]
+      },
+      {
+       "id": "c3",
+       "title": "Recording 3",
+       "cn": "讲座三",
+       "start": 1317.3,
+       "end": 1482.8,
+       "qstart": 1482.8,
+       "qend": 1570.8,
+       "questions": [
+        {
+         "no": 22,
+         "start": 1488.46,
+         "end": 1494.54,
+         "options": {
+          "A": "The motive for hard work.",
+          "B": "The reason for stagnation.",
+          "C": "The basis for self-improvement.",
+          "D": "The justification for self-confidence."
+         }
+        },
+        {
+         "no": 23,
+         "start": 1507.5,
+         "end": 1512.73,
+         "options": {
+          "A": "Feel confidence, happiness and satisfaction.",
+          "B": "Believe they have achieved their life goals.",
+          "C": "Use a key tool for setting ambitious goals.",
+          "D": "Stop imagining further progress in life."
+         }
+        },
+        {
+         "no": 24,
+         "start": 1525.53,
+         "end": 1531.28,
+         "options": {
+          "A": "We feel we are always falling behind others.",
+          "B": "We have to adapt to the ever-changing goal.",
+          "C": "There are various misconceptions about goal setting.",
+          "D": "There are always problems with the goal originally set."
+         }
+        },
+        {
+         "no": 25,
+         "start": 1544.18,
+         "end": 1565.8,
+         "options": {
+          "A": "A noticeable change in the number of goals to achieve.",
+          "B": "Measuring always against the gap rather than the gain.",
+          "C": "Measuring where we've come from instead of measuring against the goal.",
+          "D": "A proper conception of what we fail to notice in trying to achieve our goals."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
