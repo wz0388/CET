@@ -66,6 +66,12 @@ $me = current_user();
                 <button class="w-book-manage" data-book="known" title="管理熟悉本">⋯</button>
             </div>
         </div>
+
+        <div class="w-backup">
+            <button class="w-back-btn" id="btnExport" title="把词书和当前进度导出成 JSON 文件">导出词书</button>
+            <button class="w-back-btn" id="btnImport" title="从导出的 JSON 恢复进度">恢复</button>
+        </div>
+        <input type="file" id="importFile" accept=".json,application/json" hidden>
     </aside>
 
     <section class="w-main">
@@ -151,6 +157,11 @@ $me = current_user();
                 <button class="w-speak" id="dSpeak" title="播放发音（空格键）">
                     <svg viewBox="0 0 24 24"><path d="M12 3v18l-7-5H2V8h3zM16 6a6 6 0 010 12v-2a4 4 0 000-8z"/></svg>
                 </button>
+            </div>
+
+            <div class="w-dict-acts">
+                <button class="w-act" id="dFav"><span class="ic">★</span><span class="tx">收藏</span></button>
+                <button class="w-act" id="dKnown"><span class="ic">✓</span><span class="tx">熟悉</span></button>
             </div>
 
             <div class="w-dict-defs" id="dDefs"></div>
@@ -251,6 +262,7 @@ $me = current_user();
     </div>
 </div>
 
+<script src="assets/xlsx-lite.js?v=<?= ASSET_VER ?>"></script>
 <script src="assets/words.js?v=<?= ASSET_VER ?>"></script>
 </body>
 </html>

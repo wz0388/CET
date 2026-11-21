@@ -41,7 +41,9 @@
     dictEmpty: $('#dictEmpty'), dictBody: $('#dictBody'), dWord: $('#dWord'), dPhone: $('#dPhone'),
     dDefs: $('#dDefs'), dExWrap: $('#dExWrap'), dEx: $('#dEx'),
     dPhrWrap: $('#dPhrWrap'), dPhr: $('#dPhr'),
-    dSynWrap: $('#dSynWrap'), dSyn: $('#dSyn'), dSpeak: $('#dSpeak')
+    dSynWrap: $('#dSynWrap'), dSyn: $('#dSyn'), dSpeak: $('#dSpeak'),
+    dFav: $('#dFav'), dKnown: $('#dKnown'),
+    btnExport: $('#btnExport'), btnImport: $('#btnImport'), importFile: $('#importFile')
   };
 
   let words = [];
@@ -539,8 +541,25 @@
     el.dSynWrap.hidden = true;
   }
 
+  let dictWord = '';
+
+  // 词典栏里的收藏 / 熟悉按钮（与键盘 \ 和 / 等价，这里只做屏幕入口）
+  function updateDictActs() {
+    if (!el.dFav || !el.dKnown) return;
+    const fav = !!dictWord && inBook('fav', dictWord);
+    const known = !!dictWord && inBook('known', dictWord);
+    el.dFav.classList.toggle('on', fav);
+    el.dKnown.classList.toggle('on', known);
+    const ft = el.dFav.querySelector('.tx');
+    const kt = el.dKnown.querySelector('.tx');
+    if (ft) ft.textContent = fav ? '已收藏' : '收藏';
+    if (kt) kt.textContent = known ? '已熟悉' : '熟悉';
+  }
+
   function showDict(word) {
     if (!word) return;
+    dictWord = word;
+    updateDictActs();
     if (el.dictEmpty) el.dictEmpty.hidden = true;
     if (el.dictBody) el.dictBody.hidden = false;
     el.dWord.textContent = word;
@@ -837,6 +856,7 @@
     Cloud.save();
     renderBooks();
     renderBookList();
+    updateDictActs();
     showToast((on ? '已加入' : '已移出') + BOOKS[which].name + ' · ' + word);
   }
 
@@ -901,6 +921,184 @@
     }
     el.bookModal.hidden = true;
     startSession(list, BOOKS[which].name, -1, 0);
+  }
+
+  /* ---------------- 导出 / 恢复（Excel 备份） ---------------- */
+  function stampNow() {
+    const d = new Date();
+    const p = (n) => String(n).padStart(2, '0');
+    return d.getFullYear() + p(d.getMonth() + 1) + p(d.getDate()) + '-' + p(d.getHours()) + p(d.getMinutes());
+  }
+
+  // 导出：第一张表是整本词书（每个词标注练到第几遍），第二张表存章节/收藏/错词等元信息
+  function exportBook() {
+    if (!words.length) { showToast('词库还没加载完'); return; }
+    if (!window.XlsxLite) { showToast('导出模块没加载出来，刷新页面试试'); return; }
+
+    const rows = [['单词', '中文释义', '进度（第几遍）', '收藏', '熟悉', '错词次数']];
+    let progressed = 0;
+    words.forEach((x) => {
+      const st = stageOf(x.w);
+      if (st > 1) progressed += 1;
+      rows.push([
+        x.w,
+        x.t,
+        st,
+        inBook('fav', x.w) ? '★' : '',
+        inBook('known', x.w) ? '✓' : '',
+        (state.wrong && state.wrong[x.w]) || '',
+      ]);
+    });
+
+    const meta = [
+      ['format', 'cet6-words-backup'],
+      ['version', 1],
+      ['exported_at', new Date().toISOString()],
+      ['note', '第一张表是词书：改「进度（第几遍）」列后可以再用「恢复」导回来；这张表只存整章/错词等附加信息'],
+      ['total', words.length],
+      ['per_chapter', PER],
+      ['ch', state.ch],
+      ['pos', state.pos],
+      ['wrong', JSON.stringify(state.wrong || {})],
+      ['done', JSON.stringify(state.done || {})],
+      ['log', JSON.stringify((state.log || []).slice(0, 20))],
+    ];
+
+    const blob = XlsxLite.build([
+      { name: '词书', rows, widths: [20, 52, 15, 8, 8, 10] },
+      { name: '说明', rows: meta, widths: [14, 70] },
+    ]);
+
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'cet6-words-' + stampNow() + '.xlsx';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 1500);
+    showToast('已导出 ' + words.length + ' 词，其中 ' + progressed + ' 词有进度');
+  }
+
+  function metaMap(sheets) {
+    const sh = sheets.filter((x) => x.name === '说明')[0] || sheets[1];
+    const map = {};
+    if (!sh || !sh.rows) return map;
+    sh.rows.forEach((r) => { if (r && r[0]) map[String(r[0]).trim()] = r[1]; });
+    return map;
+  }
+
+  function readBookSheet(sheets) {
+    const sh = sheets.filter((x) => x.name === '词书')[0] || sheets[0];
+    const out = { list: [], unknown: 0, hasHeader: false };
+    if (!sh || !sh.rows || !sh.rows.length) return out;
+
+    let header = sh.rows[0] || [];
+    let from = 1;
+    if (String(header[0] || '').indexOf('单词') < 0) { header = []; from = 0; }
+    out.hasHeader = header.length > 0;
+
+    const pick = (kw, def) => {
+      const i = header.findIndex((h) => String(h || '').indexOf(kw) >= 0);
+      return i >= 0 ? i : def;
+    };
+    const cW = pick('单词', 0);
+    const cS = pick('进度', 2);
+    const cF = pick('收藏', 3);
+    const cK = pick('熟悉', 4);
+
+    for (let i = from; i < sh.rows.length; i++) {
+      const r = sh.rows[i] || [];
+      const raw = String(r[cW] == null ? '' : r[cW]).trim();
+      if (!raw) continue;
+      const obj = byWord.get(raw.toLowerCase());
+      if (!obj) { out.unknown += 1; continue; }
+      out.list.push({
+        w: obj.w,
+        s: Math.max(1, Math.min(5, parseInt(r[cS], 10) || 1)),
+        fav: !!(r[cF] && String(r[cF]).trim()),
+        known: !!(r[cK] && String(r[cK]).trim()),
+      });
+    }
+    return out;
+  }
+
+  async function importBook(file) {
+    if (!file) return;
+    let list = [];
+    let unknown = 0;
+    let meta = {};
+    let fav = null;
+    let known = null;
+
+    try {
+      if (/\.json$/i.test(file.name)) {
+        // 兼容之前导出的 json 备份
+        const d = JSON.parse(await file.text());
+        if (!d || d.format !== 'cet6-words-backup' || !Array.isArray(d.words)) {
+          throw new Error('不认识的 json 结构');
+        }
+        d.words.forEach((it) => {
+          const w = typeof it === 'string' ? it : (it && it.w);
+          if (!w) return;
+          const obj = byWord.get(String(w).toLowerCase());
+          if (!obj) { unknown += 1; return; }
+          const st = Math.max(1, Math.min(5, parseInt(typeof it === 'string' ? 1 : it.s, 10) || 1));
+          list.push({ w: obj.w, s: st, fav: false, known: false });
+        });
+        const p = d.progress || {};
+        fav = p.fav || null;
+        known = p.known || null;
+        meta = { ch: p.ch, pos: p.pos, wrong: JSON.stringify(p.wrong || {}), done: JSON.stringify(p.done || {}), log: JSON.stringify(p.log || []) };
+      } else {
+        const sheets = await XlsxLite.parse(await file.arrayBuffer());
+        const book = readBookSheet(sheets);
+        list = book.list;
+        unknown = book.unknown;
+        meta = metaMap(sheets);
+        if (!list.length) throw new Error('第一张表里没读到单词');
+        fav = {};
+        known = {};
+        list.forEach((it) => { if (it.fav) fav[it.w] = 1; if (it.known) known[it.w] = 1; });
+      }
+    } catch (e) {
+      showToast('读取失败：' + (e && e.message ? e.message : e));
+      return;
+    }
+
+    const map = {};
+    list.forEach((it) => { if (it.s > 1) map[it.w] = it.s; });
+    const progressed = Object.keys(map).length;
+    const latest = meta.exported_at ? String(meta.exported_at).slice(0, 16).replace('T', ' ') : '未知';
+
+    if (!confirm('将用这份备份覆盖当前进度：\n\n· 备份时间：' + latest
+      + '\n· 读到的词：' + list.length + ' 个，其中 ' + progressed + ' 个有进度'
+      + (unknown ? '\n· 词库里没有的词：' + unknown + ' 个（已跳过）' : '')
+      + '\n\n收藏本 / 熟悉本 / 错词本 / 当前章节也会一起恢复，继续吗？')) return;
+
+    state.words = map;
+    const isMap = (v) => v && typeof v === 'object' && !Array.isArray(v);
+    if (isMap(fav)) state.fav = fav;
+    if (isMap(known)) state.known = known;
+    try {
+      const w = JSON.parse(meta.wrong || '{}');
+      if (isMap(w)) state.wrong = w;
+      const dn = JSON.parse(meta.done || '{}');
+      if (isMap(dn)) state.done = dn;
+      const lg = JSON.parse(meta.log || '[]');
+      if (Array.isArray(lg)) state.log = lg.slice(0, 20);
+    } catch (e) { /* 元信息损坏就跳过，不影响单词进度 */ }
+    if (meta.ch != null && !isNaN(parseInt(meta.ch, 10))) state.ch = Math.max(0, parseInt(meta.ch, 10));
+    if (meta.pos != null && !isNaN(parseInt(meta.pos, 10))) state.pos = Math.max(0, parseInt(meta.pos, 10));
+
+    renderStats();
+    renderBooks();
+    renderLog();
+    showToast('正在写入云端…');
+    Cloud.flush().then(() => {
+      showToast('已恢复 ' + progressed + ' 个词的进度，正在刷新');
+      setTimeout(() => location.reload(), 700);
+    });
   }
 
   /* ---------------- 流程 ---------------- */
@@ -1130,6 +1328,9 @@
     focusInput();
   });
   el.speak.addEventListener('click', () => { if (cur) playAudio(cur.w); });
+  if (el.dFav) el.dFav.addEventListener('click', () => { if (dictWord) toggleBook('fav', dictWord); });
+  if (el.dKnown) el.dKnown.addEventListener('click', () => { if (dictWord) toggleBook('known', dictWord); });
+
   el.wsInput.addEventListener('input', onSearchInput);
   el.wsInput.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
@@ -1167,6 +1368,16 @@
     const w = el.dWord.textContent;
     if (w && w !== '—') playAudio(w);
   });
+  if (el.btnExport) el.btnExport.addEventListener('click', exportBook);
+  if (el.btnImport) el.btnImport.addEventListener('click', () => el.importFile && el.importFile.click());
+  if (el.importFile) {
+    el.importFile.addEventListener('change', () => {
+      const f = el.importFile.files && el.importFile.files[0];
+      el.importFile.value = '';
+      if (f) importBook(f);
+    });
+  }
+
   applyLog();
   if (el.btnLog) {
     el.btnLog.addEventListener('click', () => {
